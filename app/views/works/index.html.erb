@@ -1,5 +1,5 @@
 <div class= 'main'>
-  <div calss='toppage'>
+  <div class='toppage'>
     <%= link_to(root_path, class: 'mypage-btn') do %>
     <span class='mypage-btn-text'>マイページ</span>
     <%#= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
@@ -8,7 +8,7 @@
     <span class='logout-btn-text'>ログアウト</span>
     <%#= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
     <%end%>
-    <%= link_to(root_path, class: 'work-btn') do %>
+    <%= link_to(new_work_path, class: 'work-btn') do %>
     <span class='work-btn-text'>作業開始！</span>
     <%#= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
     <%end%>

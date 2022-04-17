@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   devise_for :users
   get 'works/index'
   root to: "works#index"
-  
-  resources :items, only:[:new , :create ,:index]
+  get 'works/break'
+  get 'works/drink'
+  resources :works, only:[:new , :create ,:index]
 
  end
