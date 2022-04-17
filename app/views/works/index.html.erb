@@ -1,2 +1,19 @@
-<h1>Work#index</h1>
-<h2>work です</h2>
+<div class= 'main'>
+  <div calss='toppage'>
+    <%= link_to(root_path, class: 'mypage-btn') do %>
+    <span class='mypage-btn-text'>マイページ</span>
+    <%#= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+    <%end%>
+        <%= link_to(root_path, class: 'logout-btn') do %>
+    <span class='logout-btn-text'>ログアウト</span>
+    <%#= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+    <%end%>
+    <%= link_to(root_path, class: 'work-btn') do %>
+    <span class='work-btn-text'>作業開始！</span>
+    <%#= image_tag 'icon_camera.png' , size: '185x50' ,class: "purchase-btn-icon" %>
+    <%end%>
+
+
+    </div>
+  </div>
+</div>
