@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2022_04_17_020123) do
   end
 
   create_table "works", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.time "start_time", null: false
     t.time "all_time", null: false
     t.time "work_time", null: false
     t.time "break_time", null: false

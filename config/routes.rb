@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get 'works/drink'
   get 'works/bgm'
   get 'works/work_end'
+  get 'works/now_work'
   resources :works, only:[:new , :create ,:index]
 
  end

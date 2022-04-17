@@ -57,3 +57,23 @@
   text-decoration: none;
   margin-bottom: 5px;
 }
+
+
+.bgm-btn {
+  width: 120px;
+  background: hsla(29, 75%, 34%, 0.815);
+  text-align: center;
+  border-radius: 4%;
+  bottom: 450px;
+  right: 532px;
+  position: fixed;
+  padding: 30px;
+}
+
+.bgm-btn-text {
+  color: #f7f3f1;
+  display: block;
+  font-size: 18px;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
