@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   root to: "works#index"
   get 'works/break'
   get 'works/drink'
+  get 'works/bgm'
+  get 'works/work_end'
   resources :works, only:[:new , :create ,:index]
 
  end
