@@ -3,5 +3,7 @@ class WorksController < ApplicationController
   end
 
   def new
+    @start_time = Time.now
   end
+
 end
