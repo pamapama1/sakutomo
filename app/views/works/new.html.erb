@@ -1,4 +1,11 @@
 <div class='works-new-countents'>
+<% if params[:start_time] == nil %>
+<%= button_to "作業開始！",{controller:"works",action:"new"},{method: :get,class: 'work-btn',params:{start_time: Time.now }} %>
+
+
+<%else%>
+<a>はい</a>
+<%end%>
 
   <div class="now-work">
    <span class='now-work-text'>作業中</span>
@@ -10,7 +17,7 @@
       <span class='bgm-btn-text'>BGM</span>
     <%end%>
      <%= link_to(works_path, class: 'end-btn' ,method: :post) do %>
-      <span class='end-btn-text'>今日の作業を終わる</span>
+       <span class='end-btn-text'>今日の作業を終わる</span>
     <%end%>
 
 
