@@ -26,9 +26,11 @@ ActiveRecord::Schema.define(version: 2022_04_17_020123) do
 
   create_table "works", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.time "start_time", null: false
-    t.time "all_time", null: false
+    t.time "end_time", null: false
     t.time "work_time", null: false
-    t.time "break_time", null: false
+    t.time "break_start_time"
+    t.time "break_end_time"
+    t.time "break_time"
     t.integer "evaluation", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
