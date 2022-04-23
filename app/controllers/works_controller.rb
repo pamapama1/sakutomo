@@ -6,23 +6,31 @@ class WorksController < ApplicationController
   def new
 
     @work = Work.new
-    @time = Time.now
-    @start_time = params[:start_time]
+   
  #   def taimu
      #@start_time = params[:start_time]
     #end
-  # binding.pry
+   #binding.pry
   end
   def create
-    #@work = Work.new(work_params)
+    binding.pry
+    @work = Work.new(work_params)
+    if @work.save
+      redirect_to root_path
+    end
+ 
+    @work = Work.new(work_params)
    # @work_time = (Time.now-@start_time)
+  end
+  def break
+    #binding.pry
   end
 
 
   private
 
   def work_params
-    params.require(:work).permit(:start_time)
+    params.permit(:start_time)
   end
 
 end

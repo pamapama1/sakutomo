@@ -8,7 +8,8 @@
     <%= link_to(works_bgm_path, class: 'bgm-btn') do %>
       <span class='bgm-btn-text'>BGM</span>
     <%end%> 
-     <%= link_to(works_now_work_path, class: 'work-btn') do %>
-      <span class='work-btn-text'>作業に戻る</span>
+    <%= button_to "作業に戻る",{controller:"works",action:"new"},{method: :get,class: 'work-btn',params:{break_end_time: Time.zone.now.to_i}} %>
+     <%#= link_to(works_now_work_path, class: 'work-btn') do %>
+      <<%#span class='work-btn-text'>作業に戻る</span>
     <%end%>
 </div>

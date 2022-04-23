@@ -1,19 +1,17 @@
 <div class='works-new-countents'>
 <% if params[:start_time] == nil %>
-<%= button_to "作業開始！",{controller:"works",action:"new"},{method: :get,class: 'work-btn',params:{start_time: Time.zone.now.to_i}} %>
+<%= button_to "作業開始！",{controller:"works",action:"create"},{method: :post,class: 'work-btn',params:{start_time: Time.zone.now.to_i}} %>
 
 <%else%>
 <a>テスト文言　終わったら消す</a>
 
 <%end%>
-<br><%= @t%>
   <div class="now-work">
    <span class='now-work-text'>作業中</span>
   </div>
-  <%# if params[:start_time] == nil %>
-<%#= button_to "ちょっと休憩",{controller:"works",action:"new"},{method: :get,class: 'work-btn',params:{start_time: Time.zone.now.to_i}} %>
-    <%= link_to( works_break_path, class: 'break-btn') do %>
-      <span class='break-btn-text'>ちょっと休憩</span>
+<%= button_to "ちょっと休憩",{controller:"works",action:"break"},{method: :get,class: 'break-btn',params:{break_start_time: Time.zone.now.to_i}} %>
+    <%#= link_to( works_break_path, class: 'break-btn') do %>
+      <%# span class='break-btn-text'>ちょっと休憩</span>
     <%end%>
     <%= link_to(works_bgm_path, class: 'bgm-btn') do %>
       <span class='bgm-btn-text'>BGM</span>
