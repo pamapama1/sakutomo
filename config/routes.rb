@@ -7,9 +7,11 @@ Rails.application.routes.draw do
   get 'works/break'
   get 'works/drink'
   get 'works/bgm'
-  get 'works/work_end'
-  get 'works/now_work'
+  get 'works/edit'
+  get 'works/end'
   post 'works/create'
-  resources :works, only:[:new , :create ,:index]
+  post 'works/update'
+  patch 'works/:id' , to: 'works#update'
+  resources :works, only:[:new , :create ,:index,:edit,:update]
 
  end

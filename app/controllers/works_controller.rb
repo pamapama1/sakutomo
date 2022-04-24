@@ -13,10 +13,10 @@ class WorksController < ApplicationController
    #binding.pry
   end
   def create
-    binding.pry
+    #binding.pry
     @work = Work.new(work_params)
     if @work.save
-      redirect_to root_path
+      redirect_to controller: :works,action: :edit, id: @work.id
     end
  
     @work = Work.new(work_params)
@@ -25,12 +25,21 @@ class WorksController < ApplicationController
   def break
     #binding.pry
   end
+  def edit
+  end
+
+  def update
+    @work = Work.find(params[:id])
+   if @work.update(end_time: params[:end_time])
+     redirect_to root_path
+   end
+  end
 
 
   private
 
   def work_params
-    params.permit(:start_time)
+    params.permit(:start_time,:end_time)
   end
 
 end

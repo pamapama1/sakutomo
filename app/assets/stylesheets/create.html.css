@@ -1,16 +1,16 @@
 
-.work-end {
+.end {
   width: 120px;
   background: #e07007;
   text-align: center;
   border-radius: 4%;
-  bottom: 450px;
-  right: 132px;
+  bottom: 650px;
+  right: 152px;
   position: fixed;
   padding: 30px;
 }
 
-.work-end-text {
+.end-text {
   color: #f7f3f1;
   display: block;
   font-size: 18px;

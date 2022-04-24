@@ -2,22 +2,11 @@
 <% if params[:start_time] == nil %>
 <%= button_to "作業開始！",{controller:"works",action:"create"},{method: :post,class: 'work-btn',params:{start_time: Time.zone.now.to_i}} %>
 
-<%else%>
-<a>テスト文言　終わったら消す</a>
-
 <%end%>
-  <div class="now-work">
-   <span class='now-work-text'>作業中</span>
-  </div>
-<%= button_to "ちょっと休憩",{controller:"works",action:"break"},{method: :get,class: 'break-btn',params:{break_start_time: Time.zone.now.to_i}} %>
-    <%#= link_to( works_break_path, class: 'break-btn') do %>
-      <%# span class='break-btn-text'>ちょっと休憩</span>
-    <%end%>
+
+
     <%= link_to(works_bgm_path, class: 'bgm-btn') do %>
       <span class='bgm-btn-text'>BGM</span>
-    <%end%>
-     <%= link_to(works_path, class: 'end-btn' ,method: :post) do %>
-       <span class='end-btn-text'>今日の作業を終わる</span>
     <%end%>
 
 
