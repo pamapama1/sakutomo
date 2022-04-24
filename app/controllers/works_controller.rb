@@ -31,8 +31,24 @@ class WorksController < ApplicationController
   def update
     @work = Work.find(params[:id])
    if @work.update(end_time: params[:end_time])
-     redirect_to root_path
+     redirect_to action: :work_end, id: @work.id
    end
+   def work_end
+    @work = Work.find(params[:id])
+
+   # binding.pry
+    @start_time = @work.start_time.to_f
+    @end_time = @work.end_time.to_f
+
+    t = @end_time - @start_time
+    t = Time.at(t-9*60*60)
+   @t = t.strftime("%H:%M:%S")
+   end
+   def taimu
+
+   
+  end
+
   end
 
 

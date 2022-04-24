@@ -8,10 +8,14 @@ Rails.application.routes.draw do
   get 'works/drink'
   get 'works/bgm'
   get 'works/edit'
-  get 'works/end'
+  get 'works/works_end'
   post 'works/create'
   post 'works/update'
   patch 'works/:id' , to: 'works#update'
-  resources :works, only:[:new , :create ,:index,:edit,:update]
+  resources :works, only:[:new , :create ,:index,:edit,:update]do
+    member do
+      get 'work_end'
+    end
+  end
 
  end
