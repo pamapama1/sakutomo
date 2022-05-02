@@ -1,6 +1,7 @@
 <div class='works-new-countents'>
 <% if params[:start_time] == nil %>
-<%= button_to "作業開始！",{controller:"works",action:"create"},{method: :post,class: 'work-btn',params:{start_time: Time.zone.now.to_i}} %>
+<%= button_to "作業開始！",{controller:"works",action:"create"},{method: :post,class: 'work-btn',id: "work_start"} %>
+<%#= button_to "作業開始！",{controller:"works",action:"create"},{method: :post,class: 'work-btn',params:{start_time: Time.zone.now.to_i}} %>
 
 <%end%>
 

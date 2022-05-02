@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_04_17_020123) do
+ActiveRecord::Schema.define(version: 2022_04_24_132703) do
+
+  create_table "breaks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "work_id"
+    t.integer "breakcount"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["work_id"], name: "index_breaks_on_work_id"
+  end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
@@ -25,11 +33,7 @@ ActiveRecord::Schema.define(version: 2022_04_17_020123) do
   end
 
   create_table "works", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "start_time"
-    t.string "end_time"
     t.string "work_time"
-    t.string "break_start_time"
-    t.string "break_end_time"
     t.string "break_time"
     t.integer "evaluation"
     t.bigint "user_id"
@@ -38,4 +42,5 @@ ActiveRecord::Schema.define(version: 2022_04_17_020123) do
     t.index ["user_id"], name: "index_works_on_user_id"
   end
 
+  add_foreign_key "breaks", "works"
 end

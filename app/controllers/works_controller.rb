@@ -1,61 +1,74 @@
 class WorksController < ApplicationController
-  def index
-  end
+
   def now_work
   end
   def new
-
+ 
+    @array = Array.new()
     @work = Work.new
-   
  #   def taimu
      #@start_time = params[:start_time]
     #end
    #binding.pry
   end
   def create
-    #binding.pry
     @work = Work.new(work_params)
     if @work.save
       redirect_to controller: :works,action: :edit, id: @work.id
     end
  
-    @work = Work.new(work_params)
    # @work_time = (Time.now-@start_time)
   end
   def break
     #binding.pry
   end
   def edit
+    @work = Work.find(params[:id])
   end
 
   def update
     @work = Work.find(params[:id])
-   if @work.update(end_time: params[:end_time])
-     redirect_to action: :work_end, id: @work.id
+    #if @work.update(work_params)
+
+   if @work.update(work_params)
+     redirect_to action: :work_end 
+    else
+      render 'works/edit'
+
    end
    def work_end
     @work = Work.find(params[:id])
+    @start_time = @work.created_at.to_f
+    @end_time = @work.updated_at.to_f
 
-   # binding.pry
-    @start_time = @work.start_time.to_f
-    @end_time = @work.end_time.to_f
 
-    t = @end_time - @start_time
-    t = Time.at(t-9*60*60)
+    @arrayend = Break.where(work_id: @work.id).pluck(:updated_at)
+    @arraystart = Break.where(work_id: @work.id).pluck(:created_at)
+    @array = [@arrayend,@arraystart].transpose.map{|ary| ary.inject(:-)}
+    @array = @array.sum
+    ti = @end_time - @start_time - @array
+
+     if ti >= 3600
+    t = Time.at(ti-9*60*60)
    @t = t.strftime("%H:%M:%S")
+   @array = Time.at(@array-9*60*60)
+   @array = @array.strftime("%M:%S")
+     else
+    t = Time.at(ti-9*60*60)
+    @t = t.strftime("%M:%S")
+    @array = Time.at(@array-9*60*60)
+    @array = @array.strftime("%M:%S")
+     end
+
+     @work.update(work_time: ti.to_f,break_time: @array)
    end
-   def taimu
-
-   
   end
 
-  end
 
 
   private
-
   def work_params
-    params.permit(:start_time,:end_time)
+    params.permit(:created_at,:updated_at,:work_time,:work_id)#.merge(work_id: params[:work_id].to_i)
   end
 
 end
