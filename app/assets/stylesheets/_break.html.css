@@ -1,0 +1,42 @@
+
+.work-break-btn {
+  width: 120px;
+  background: #f3ec1a;
+  text-align: center;
+  border-radius: 4%;
+  bottom: 50px;
+  right: 32px;
+  position: fixed;
+  padding: 30px;
+}
+
+.work-break-text {
+  color: #b41399;
+  display: block;
+  font-size: 18px;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+
+.drink-btn {
+  width: 120px;
+  background: #1ab6f3;
+  text-align: center;
+  border-radius: 4%;
+  bottom: 250px;
+  right: 32px;
+  position: fixed;
+  padding: 30px;
+}
+
+.drink-btn-text {
+  color: #b41399;
+  display: block;
+  font-size: 18px;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+
+
