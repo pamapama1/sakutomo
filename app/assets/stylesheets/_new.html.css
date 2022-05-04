@@ -1,4 +1,3 @@
-
 .works-new-countents{
   background: #d2e624;
   top:50%;
@@ -30,24 +29,13 @@
   text-align: center;
   border-radius: 4%;
   bottom: 100px;
-=======
-
-.now-work {
-  width: 120px;
-  background: #d81111;
-  text-align: center;
-  border-radius: 4%;
-  bottom: 250px;
   right: 32px;
   position: fixed;
   padding: 30px;
 }
 
-
 .mypage-btn-text {
   color: rgb(7, 7, 7);
-.now-work-text {
-  color: #13b45c;
   display: block;
   font-size: 18px;
   text-decoration: none;
@@ -60,14 +48,6 @@
   text-align: center;
   border-radius: 4%;
   bottom: 250px;
-=======
-
-.break-btn {
-  width: 120px;
-  background: #f3ec1a;
-  text-align: center;
-  border-radius: 4%;
-  bottom: 50px;
   right: 32px;
   position: fixed;
   padding: 30px;
@@ -75,8 +55,6 @@
 
 .logout-btn-text {
   color: rgb(7, 7, 7);
-.break-btn-text {
-  color: #b41399;
   display: block;
   font-size: 18px;
   text-decoration: none;
@@ -89,23 +67,12 @@
   border-radius: 4%;
   bottom: 250px;
   right: 600px;
-
-
-.end-btn {
-  width: 120px;
-  background: #e07007;
-  text-align: center;
-  border-radius: 4%;
-  bottom: 450px;
-  right: 132px;
   position: fixed;
   padding: 30px;
 }
 
 .sinin-btn-text {
   color: rgb(7, 7, 7);
-.end-btn-text {
-  color: #f7f3f1;
   display: block;
   font-size: 18px;
   text-decoration: none;
@@ -119,26 +86,14 @@
   border-radius: 4%;
   bottom: 250px;
   right: 32px;
-
-.bgm-btn {
-  width: 120px;
-  background: hsla(29, 75%, 34%, 0.815);
-  text-align: center;
-  border-radius: 4%;
-  bottom: 450px;
   position: fixed;
   padding: 30px;
 }
 
 .session-btn-text {
   color: rgb(7, 7, 7);
-.bgm-btn-text {
-  color: #f7f3f1;
   display: block;
   font-size: 18px;
   text-decoration: none;
   margin-bottom: 5px;
-
-}
-
 }

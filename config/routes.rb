@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'breaks/edit'
   get 'users/index'
-  devise_for :users
   get 'works/index'
   get 'works/create'
   root to: "works#new"

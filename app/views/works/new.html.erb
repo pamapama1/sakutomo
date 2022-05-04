@@ -9,13 +9,15 @@
     <%= link_to(works_bgm_path, class: 'bgm-btn') do %>
       <span class='bgm-btn-text'>BGM</span>
     <%end%>
+<% if user_signed_in? %>
+       <li><%= link_to current_user.nickname, "#", class: "user-nickname"%> </li> 
+       <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li> 
+       <% else %>
+      <li><%= link_to 'ログイン',  new_user_session_path, class: "session-btn" %></li>
+      <li><%= link_to '新規登録', new_user_registration_path, class: "sinin-btn" %></li>
+      <% end %>
 
-  <%= link_to( new_user_registration_path,class: 'sinin-btn') do %>
-      <span class='sinin-btn-text'>サインイン</span>
-    <%end%>
-      <%= link_to(new_user_session_path, class: 'session-btn') do %>
-      <span class='session-btn-text'>ログイン</span>
-    <%end%>
+
 
 
 
