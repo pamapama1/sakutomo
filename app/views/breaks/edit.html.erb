@@ -1,0 +1,15 @@
+<div class='break_top'> 
+ <span >new b</span>
+<div class="work-break">
+   <span class='work-break-text'>休憩中</span>
+  </div>
+    <%= link_to(works_drink_path, class: 'drink-btn') do %>
+      <span class='drink-btn-text'>ドリンク</span>
+    <%end%>
+    <%= link_to(works_bgm_path, class: 'bgm-btn') do %>
+      <span class='bgm-btn-text'>BGM</span>
+    <%end%> 
+    <%= button_to "作業に戻る",{controller:"breaks",action:"update"},{method: :patch,class: 'work-btn',params: {id: params[:work_id],breakcount:1}} %>
+    
+</div>
+ 
