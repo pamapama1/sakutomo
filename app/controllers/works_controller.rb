@@ -12,11 +12,13 @@ class WorksController < ApplicationController
    #binding.pry
   end
   def create
+    binding.pry
     @work = Work.new(work_params)
     if @work.save
       redirect_to controller: :works,action: :edit, id: @work.id
     end
  
+    
    # @work_time = (Time.now-@start_time)
   end
   def break
@@ -68,7 +70,7 @@ class WorksController < ApplicationController
 
   private
   def work_params
-    params.permit(:created_at,:updated_at,:work_time,:work_id)#.merge(work_id: params[:work_id].to_i)
+    params.permit(:created_at,:updated_at,:work_time,:work_id).merge(user_id: current_user.id)
   end
 
 end
