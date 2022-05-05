@@ -17,6 +17,7 @@ class WorksController < ApplicationController
       redirect_to controller: :works,action: :edit, id: @work.id
     end
  
+    
    # @work_time = (Time.now-@start_time)
   end
   def break
