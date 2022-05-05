@@ -1,5 +1,49 @@
+.works-new-countents{
+  background: #d2e624;
+  top:50%;
+}
+.work-btn {
+  width: 50%;
+  background: #3ccace;
+  text-align: center;
+  border-radius: 10%;
+  height: 15%;
+  top: 32px;
+  right: 50px;
+  position: fixed;
+  padding: 15px;
+  font-size: 35px;
+}
 
-.now-work {
+.work-btn-text {
+  color: #fff;
+  display: block;
+  font-size: 100px;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.mypage-btn {
+  width: 120px;
+  background: #fff333;
+  text-align: center;
+  border-radius: 4%;
+  bottom: 100px;
+  right: 32px;
+  position: fixed;
+  padding: 30px;
+}
+
+
+.mypage-btn-text {
+  color: rgb(7, 7, 7);
+  display: block;
+  font-size: 18px;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+
+.logout-btn {
   width: 120px;
   background: #d81111;
   text-align: center;
@@ -10,69 +54,45 @@
   padding: 30px;
 }
 
+.logout-btn-text {
+  color: rgb(7, 7, 7);
+  display: block;
+  font-size: 18px;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
+.sinin-btn {
+  width: 120px;
+  background: hsl(315, 85%, 46%);
+  text-align: center;
+  border-radius: 4%;
+  bottom: 250px;
+  right: 600px;
+  position: fixed;
+  padding: 30px;
+}
 
-.now-work-text {
-  color: #13b45c;
+.sinin-btn-text {
+  color: rgb(7, 7, 7);
   display: block;
   font-size: 18px;
   text-decoration: none;
   margin-bottom: 5px;
 }
 
-
-.break-btn {
+.session-btn {
   width: 120px;
-  background: #f3ec1a;
+  background: #3611d8;
   text-align: center;
   border-radius: 4%;
-  bottom: 50px;
+  bottom: 250px;
   right: 32px;
   position: fixed;
   padding: 30px;
 }
 
-.break-btn-text {
-  color: #b41399;
-  display: block;
-  font-size: 18px;
-  text-decoration: none;
-  margin-bottom: 5px;
-}
-
-
-.end-btn {
-  width: 120px;
-  background: #e07007;
-  text-align: center;
-  border-radius: 4%;
-  bottom: 450px;
-  right: 132px;
-  position: fixed;
-  padding: 30px;
-}
-
-.end-btn-text {
-  color: #f7f3f1;
-  display: block;
-  font-size: 18px;
-  text-decoration: none;
-  margin-bottom: 5px;
-}
-
-
-.bgm-btn {
-  width: 120px;
-  background: hsla(29, 75%, 34%, 0.815);
-  text-align: center;
-  border-radius: 4%;
-  bottom: 450px;
-  right: 532px;
-  position: fixed;
-  padding: 30px;
-}
-
-.bgm-btn-text {
-  color: #f7f3f1;
+.session-btn-text {
+  color: rgb(7, 7, 7);
   display: block;
   font-size: 18px;
   text-decoration: none;
