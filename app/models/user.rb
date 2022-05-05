@@ -8,4 +8,6 @@ class User < ApplicationRecord
          validates_format_of :password, with: PASSWORD_REGEX, message: 'には英字と数字を含めて設定してください'
          validates :sex, presence: true
          validates :age, presence: true
+
+         has_many :breaks
          end
