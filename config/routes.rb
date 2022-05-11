@@ -4,10 +4,12 @@ Rails.application.routes.draw do
   get 'users/index'
   get 'works/index'
   get 'works/create'
+  #root to: "works#chart"
   root to: "works#new"
   get 'works/break'
   get 'works/drink'
   get 'works/bgm'
+  get 'works/evaluation'
   get 'works/edit'
   get 'works/works_end'
   post 'works/create'

@@ -1,5 +1,5 @@
 class WorksController < ApplicationController
-
+  before_action :authenticate_user!, except: [  :new]
   def now_work
   end
   def new
@@ -12,7 +12,6 @@ class WorksController < ApplicationController
    #binding.pry
   end
   def create
-    binding.pry
     @work = Work.new(work_params)
     if @work.save
       redirect_to controller: :works,action: :edit, id: @work.id
@@ -25,6 +24,9 @@ class WorksController < ApplicationController
     #binding.pry
   end
   def edit
+    @work = Work.find(params[:id])
+  end
+  def evaluation
     @work = Work.find(params[:id])
   end
 
@@ -64,13 +66,14 @@ class WorksController < ApplicationController
 
      @work.update(work_time: ti.to_f,break_time: @array)
    end
+
   end
 
 
 
   private
   def work_params
-    params.permit(:created_at,:updated_at,:work_time,:work_id).merge(user_id: current_user.id)
+    params.permit(:created_at,:updated_at,:work_time,:work_id,:evaluation).merge(user_id: current_user.id)
   end
 
 end

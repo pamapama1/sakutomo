@@ -1,26 +1,28 @@
-<div class='works-new-countents'>
-<% if params[:start_time] == nil %>
-<%= button_to "作業開始！",{controller:"works",action:"create"},{method: :post,class: 'work-btn',id: "work_start"} %>
-<%#= button_to "作業開始！",{controller:"works",action:"create"},{method: :post,class: 'work-btn',params:{start_time: Time.zone.now.to_i}} %>
-
-<%end%>
-
-
-    <%= link_to(works_bgm_path, class: 'bgm-btn') do %>
-      <span class='bgm-btn-text'>BGM</span>
-    <%end%>
-<% if user_signed_in? %>
-       <li><%= link_to current_user.nickname, "#", class: "user-nickname"%> </li> 
-       <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li> 
-       <% else %>
-      <li><%= link_to 'ログイン',  new_user_session_path, class: "session-btn" %></li>
-      <li><%= link_to '新規登録', new_user_registration_path, class: "sinin-btn" %></li>
-      <% end %>
-
-
-
-
-
-
-
+<div class = 'top'>
+    <header class = 'header'>
+        <% if user_signed_in? %>
+          <div class='header-one'>
+          <li>こんにちわ！<%= link_to current_user.nickname, "#", class: "user-nickname"%>さん</li> 
+          <%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout-btn" %>
+          </div>
+        <% else %>
+          <div class = 'header-two'>
+          <li><%= link_to 'ログイン',  new_user_session_path, class: "session-btn" %></li>
+          <li><%= link_to '新規登録', new_user_registration_path, class: "sinin-btn" %></li>
+          </div>
+        <% end %>
+      </div>
+    </header>
+   <div class='works-new-countents'>
+      <div class= 'work_right'>
+         <% if params[:start_time] == nil %>
+           <%= button_to "作業開始！",{controller:"works",action:"create"},{method: :post,class: 'work-btn',id: "work_start"} %>
+         <%end%>
+         <%#= link_to 'BGM', works_bgm_path, class: "bgm-btn" %>
+         <%= link_to 'BGM', works_bgm_path, class: "btn btn--orange btn--cubic btn--shadow" %>
+      </div>
+      <div class = 'work_reft'>
+      <canvas id="myLineChart"></canvas>
+      </div>
+   </div>
 </div>
