@@ -4,7 +4,7 @@
     <title>Sakutomo</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+     <%= include_gon %>
     <script type="text/javascript" src="worktime.js"></script>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -13,7 +13,6 @@
     </head>
 
   <body>
-  
     <%= yield %>
   </body>
 </html>

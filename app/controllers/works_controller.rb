@@ -1,14 +1,21 @@
 class WorksController < ApplicationController
   before_action :authenticate_user!, except: [  :new]
-  def now_work
-  end
+
   def new
- 
+   # binding.pry
+    Groupdate.time_zone = "Tokyo"
     @array = Array.new()
     @work = Work.new
- #   def taimu
-     #@start_time = params[:start_time]
-    #end
+   # @work_all = Work.select(:id,:user_id,:created_at,:work_time,:break_time,:evaluation)
+    #@work_by_day = @work_all.group_by_day(:created_at, last:4).size
+    #@chartlabels = @work_by_day.map(&:first).to_json.html_safe
+    gon.work_time_along = Work.pluck('work_time').last(4)
+    #work_time_along =  @work_time_along.map(&:to_i).to_json.html_safe
+    gon.work_break_along = Work.pluck('break_time').last(4)
+    #work_break_along = @work_break_along.map(&:to_i).to_json.html_safe
+    gon.work_evaluation = Work.pluck('evaluation').last(4)
+   # work_evaluation = @work_evaluation.map(&:to_i).to_json.html_safe
+
    #binding.pry
   end
   def create
