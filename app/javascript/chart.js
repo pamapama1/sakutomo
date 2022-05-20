@@ -5,32 +5,36 @@ window.addEventListener('pageshow', function(){
       
       type: 'bar',
       data: {
-          labels: ['前回', '前々回', '3回目前', '4回前'],
+          labels: ['4回前', '3前回', '前々回', '前回'],
           datasets: [{
-              //棒グラフ
+            //棒グラフ
+            label: "作業時間",
+            data: gon.work_time_along,
+           // data: ['100','200','300','400'],
+           // borderColor: "rgba(255,0,0,1)",
+            backgroundColor: "rgba(255,0,0,1)",
+            order:1,
+            yAxisID: 'right-y-axis'
+        },{
+          //棒グラフ
+          label: "休憩時間",
+         // type: 'bar',
+          data: gon.work_break_along,
+          //data: ['100','200','300','400'],
+         // borderColor: "rgba(255,255,0,1)",
+          backgroundColor: "rgba(255,255,0,1)",
+          order:2,
+          yAxisID: 'right-y-axis'
+        },{
+              //折線グラフ
               label: "集中度",
+              type: 'line',
               data: gon.work_evaluation,
               //data: ['1','2','3','4'],
-              backgroundColor: "rgba(0,0,128,0.5)", 
+              borderColor: "rgba(0,0,128,0.5)",
+              order :0,
+             // backgroundColor: "rgba(0,0,0,0,0)", 
               yAxisID: 'left-y-axis'
-          }, {
-              //折れ線グラフ
-              label: "作業時間",
-              type: 'line',
-              data: gon.work_time_along,
-             // data: ['100','200','300','400'],
-              borderColor: "rgba(255,0,0,1)",
-              backgroundColor: "rgba(0,0,0,0)",
-              yAxisID: 'right-y-axis'
-          }, {
-            //折れ線グラフ
-            label: "休憩時間",
-            type: 'line',
-            data: gon.work_break_along,
-            //data: ['100','200','300','400'],
-            borderColor: "rgba(255,255,0,1)",
-            backgroundColor: "rgba(0,0,0,0)",
-            yAxisID: 'right-y-axis'
           }]
       },
       options: {
@@ -55,9 +59,9 @@ window.addEventListener('pageshow', function(){
                     id: 'right-y-axis',
                     position: 'right',
                     ticks: {
-                      suggestedMax: 600,
+                      suggestedMax: 5,
                       suggestedMin: 0,
-                      stepSize: 60,
+                      stepSize: 1,
                       callback: function(value, index, values){
                         return  value +  '分'
                       }

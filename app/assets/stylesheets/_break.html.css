@@ -1,4 +1,29 @@
-
+.break_top{
+  display: flex;
+  height: 8vh;
+  text-align: center;
+  padding: 30px ;
+  background: #11d843;
+  justify-content: center;
+}
+.work-break{
+  background: #9bce3c;
+  padding: 2% 3% 3% 0;
+}
+.work-btn-break {
+  width: 90%;
+  background: #3ccace;
+  text-align: center;
+  /* border-radius: 10%; */
+  /* height: 10%; */
+  /* top: 302px; */
+  /* right: 50px; */
+  /* position: fixed; */
+  padding: 5%;
+  margin: 6% 5% 5% 5%;
+  font-size: 50px;
+  justify-content: center;
+}
 .work-break-btn {
   width: 120px;
   background: #f3ec1a;
@@ -11,9 +36,9 @@
 }
 
 .work-break-text {
-  color: #b41399;
+  color: #13a1b4;
   display: block;
-  font-size: 18px;
+  font-size: 50px;
   text-decoration: none;
   margin-bottom: 5px;
 }
@@ -24,19 +49,28 @@
   background: #1ab6f3;
   text-align: center;
   border-radius: 4%;
-  bottom: 250px;
-  right: 32px;
-  position: fixed;
-  padding: 30px;
+  padding: 3% 3% 3% 3%;
+  margin: 10% 0 0 5%;
+  text-decoration: none;
+  justify-content: center;
 }
+.naraberu{
 
+}
 .drink-btn-text {
-  color: #b41399;
-  display: block;
+  color: #070707;
+
   font-size: 18px;
   text-decoration: none;
   margin-bottom: 5px;
 }
-
-
+.bgm-btn-break {
+  width: 120px;
+  background: #e45821d0;
+  text-align: center;
+  border-radius: 4%;
+  padding: 3% 3% 3% 3%;
+  margin: 10% 0 0 1%;
+  text-decoration: none;
+}
 

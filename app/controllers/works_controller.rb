@@ -1,22 +1,15 @@
 class WorksController < ApplicationController
-  before_action :authenticate_user!, except: [  :new]
+  before_action :authenticate_user!, except: [:new]
 
   def new
-   # binding.pry
     Groupdate.time_zone = "Tokyo"
     @array = Array.new()
     @work = Work.new
-   # @work_all = Work.select(:id,:user_id,:created_at,:work_time,:break_time,:evaluation)
-    #@work_by_day = @work_all.group_by_day(:created_at, last:4).size
-    #@chartlabels = @work_by_day.map(&:first).to_json.html_safe
-    gon.work_time_along = Work.pluck('work_time').last(4)
-    #work_time_along =  @work_time_along.map(&:to_i).to_json.html_safe
-    gon.work_break_along = Work.pluck('break_time').last(4)
-    #work_break_along = @work_break_along.map(&:to_i).to_json.html_safe
-    gon.work_evaluation = Work.pluck('evaluation').last(4)
-   # work_evaluation = @work_evaluation.map(&:to_i).to_json.html_safe
-
-   #binding.pry
+    if  user_signed_in?
+    gon.work_time_along = Work.where(user_id: current_user.id).pluck(:work_time).last(4)
+    gon.work_break_along = Work.where(user_id: current_user.id).pluck(:break_time).last(4)
+    gon.work_evaluation = Work.where(user_id: current_user.id).pluck(:evaluation).last(4)
+    end
   end
   def create
     @work = Work.new(work_params)
@@ -35,6 +28,7 @@ class WorksController < ApplicationController
   end
   def evaluation
     @work = Work.find(params[:id])
+
   end
 
   def update
@@ -44,10 +38,11 @@ class WorksController < ApplicationController
    if @work.update(work_params)
      redirect_to action: :work_end 
     else
-      render 'works/edit'
+      render 'works/evaluation'
 
    end
    def work_end
+    #binding.pry
     @work = Work.find(params[:id])
     @start_time = @work.created_at.to_f
     @end_time = @work.updated_at.to_f
@@ -62,16 +57,16 @@ class WorksController < ApplicationController
      if ti >= 3600
     t = Time.at(ti-9*60*60)
    @t = t.strftime("%H:%M:%S")
-   @array = Time.at(@array-9*60*60)
-   @array = @array.strftime("%M:%S")
+   @arrayone = Time.at(@array - 9*60*60)
+   @arrayone = @arrayone.strftime("%M:%S")
      else
     t = Time.at(ti-9*60*60)
     @t = t.strftime("%M:%S")
-    @array = Time.at(@array-9*60*60)
-    @array = @array.strftime("%M:%S")
+    @arrayone = Time.at(@array - 9*60*60)
+    @arrayone = @arrayone.strftime("%M:%S")
      end
 
-     @work.update(work_time: ti.to_f,break_time: @array)
+     @work.update(work_time: ti.to_f,break_time: @array.to_f)
    end
 
   end

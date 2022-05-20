@@ -22,8 +22,11 @@
          <%= link_to 'BGM', works_bgm_path, class: "btn btn--orange btn--cubic btn--shadow" %>
       </div>
       <div class = 'work_reft'>
-      <canvas id="myLineChart"></canvas>
-      
+         <div class = 'chart'>
+         <% if user_signed_in? %>
+           <canvas id="myLineChart"width="400" height="300"></canvas>
+           <%end%>
+         </div>
       </div>
    </div>
 </div>
