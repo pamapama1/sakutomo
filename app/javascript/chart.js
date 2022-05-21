@@ -59,11 +59,11 @@ window.addEventListener('pageshow', function(){
                     id: 'right-y-axis',
                     position: 'right',
                     ticks: {
-                      suggestedMax: 5,
+                      suggestedMax: 10800,
                       suggestedMin: 0,
-                      stepSize: 1,
+                      stepSize: 360,
                       callback: function(value, index, values){
-                        return  value +  '分'
+                        return  value +  '秒'
                       }
                     },
                     // グリッドラインを消す

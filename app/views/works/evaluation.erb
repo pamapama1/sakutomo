@@ -1,20 +1,20 @@
-<div class= 'evaluation_head'>
-  <%= form_with model: @works, url: work_path(params[:id]),method: :patch, class: 'registration-main', local: true do |f| %>
-+
-  <div class="form-group">
-    <div class='form-text-wrap'>
-      <label class="form-text">今日の作業評価</label>
+<div class= 'evaluation_head-eva'>
+  <%= form_with model: @works, url: work_path(params[:id]),method: :patch, class: 'registration-main-eva', local: true do |f| %>
+
+  <div class="form-group-eva">
+    <div class='form-text-wrap-eva'>
+      <label class="form-text-eva">今日の作業評価</label>
       <span class="indispensable">必須</span>
     </div>
-    <div class='input-birth-wrap'>
-     <%= f.radio_button :evaluation, 1 %>
-     <%= f.label :evaluation, "何方かと言えば集中できなかった", {value: :male, style: "display: inline-block;"} %>
-      <%= f.radio_button :evaluation, 2 %>
+    <div class='input-birth-wrap-eva'>
+    <li> <%= f.radio_button :evaluation, 1 %>
+     <%= f.label :evaluation, "集中できなかった", {value: :male, style: "display: inline-block;"} %>
+   <li>   <%= f.radio_button :evaluation, 2 %>
      <%= f.label :evaluation, "集中できた", {value: :male, style: "display: inline-block;"} %>
-     <%= f.radio_button :evaluation, 3 %>
+   <li>  <%= f.radio_button :evaluation, 3 %>
      <%= f.label :evaluation, "前回以上に集中できた", {value: :male, style: "display: inline-block;"} %>
-     <%= f.radio_button :evaluation, 4 %>
-     <%= f.label :evaluation, "集中しすぎた", {value: :male, style: "display: inline-block;"} %>
+   <li>  <%= f.radio_button :evaluation, 4 %>
+     <%= f.label :evaluation, "最高に集中できた", {value: :male, style: "display: inline-block;"} %>
 
     </div>
     

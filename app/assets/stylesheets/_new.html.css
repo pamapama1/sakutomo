@@ -39,12 +39,12 @@
 }
 .work_right{
   width: 50vw;
-  height: 90vh;
-  background: #f5f59e;
-  display: flex;
-  flex-direction: column;
-  justify-content:left;
-  align-items :center;
+    height: 90vh;
+    background: #f5f59e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .work_reft{
   width: 50vw;
@@ -63,11 +63,10 @@
   margin:20px;
   padding-top: 1%;
 }
-.button_to{
+/*.button_to{
   width: 100%;
-}
+}*/
 .work-btn {
-  width: 90%;
   background: #3ccace;
   text-align: center;
   /*border-radius: 10%;*/
@@ -76,7 +75,7 @@
   /*right: 50px;*/
   /*position: fixed;*/
   padding: 15% ;
-  margin: 6% 5% 0 5%;
+  margin: 6% 5% 5% 5%;
   font-size: 50px;
 }
 
@@ -189,4 +188,13 @@
 
   -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
   box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+}
+.indispensable{
+  background: #ea352d;
+  margin-left: 8px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: bold;
 }

@@ -18,26 +18,31 @@
   margin-bottom: 5px;
 }
 .buttonposi{
-  display: flex;
+
 align-items: center;
 }
+.work_right_second{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*
 .work_right_second{
   width: 70vw;
     height: 90vh;
     background: #f5f59e;
-    /* display: flex; */
     flex-direction: column;
     justify-content: left;
     align-items: center;
-}
-.work_reft_second{
+}*/
+/*.work_reft_second{
   width: 30vw;
   height: 90vh;
   background: #e3f0d1;
   display: flex;
   align-items: center;
-  /*padding:25vh 0 ;*/
-  justify-content:left;
+  justify-content: left ;
 
 }
 .reft_center{
@@ -52,40 +57,42 @@ align-items: center;
   padding: 15% 20%;
   font-size: 30px;
   text-decoration: none;
-}
+}*/
 
 .break-btn {
-  width: 80%;
   height: 70%;
   background: #f3ec1a;
   text-align: center;
   border-radius: 4%;
-  padding: 15%;
+  padding: 15% 32%;
   font-size:30px;
-  margin: 5% 10% 10% 10%;
+  margin: 5% 10% 10% 0%;
   align-items: center;
   
 }
 
-.break-btn-text {
+/*.break-btn-text {
   color: #b41399;
   display: block;
   font-size: 18px;
   text-decoration: none;
   margin-bottom: 5px;
-}
+}*/
 
-.center{
+/*.center{
   display: flex;
   
-}
+}*/
 .end-btn {
-  background: #e07007;
+  height: 70%;
+  background: #f3ae1a;
   text-align: center;
-  font-size: 30px;
   border-radius: 4%;
-  padding: 45% 20%;
-  margin: 10% 10% 30% 10%;
+  padding: 15%;
+  font-size:30px;
+  margin: 5% 10% 10% 0%;
+  align-items: center;
+  
 }
 
 .end-btn-text {
