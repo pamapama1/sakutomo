@@ -1,53 +1,98 @@
 
 .now-work {
-  /*width: 120px;
-  
-  position:fixed;
-  border-radius: 4%;*/
-  top: 10px;
+  display: flex;
+  height: 8vh;
   text-align: center;
   padding: 30px;
   background: #d81111;
+  justify-content: center;
 }
 
 .now-work-text {
+  justify-content: center;
+  align-items: center;
   color: #13b45c;
-  display: block;
-  font-size: 18px;
+  display: flex;
+  font-size: 35px;
   text-decoration: none;
   margin-bottom: 5px;
 }
+.buttonposi{
 
+align-items: center;
+}
+.work_right_second{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/*
+.work_right_second{
+  width: 70vw;
+    height: 90vh;
+    background: #f5f59e;
+    flex-direction: column;
+    justify-content: left;
+    align-items: center;
+}*/
+/*.work_reft_second{
+  width: 30vw;
+  height: 90vh;
+  background: #e3f0d1;
+  display: flex;
+  align-items: center;
+  justify-content: left ;
+
+}
+.reft_center{
+}
+.bgm-btn-second {
+  color: #fff;
+  width: 30%;
+  background: #e45821d0;
+  text-align: center;
+  border-radius: 4%;
+  margin: 5% 5% 0 10%;
+  padding: 15% 20%;
+  font-size: 30px;
+  text-decoration: none;
+}*/
 
 .break-btn {
-  width: 220px;
+  height: 70%;
   background: #f3ec1a;
   text-align: center;
   border-radius: 4%;
-  bottom: 50px;
-  right: 32px;
-  position: fixed;
-  padding: 30px;
+  padding: 15% 32%;
+  font-size:30px;
+  margin: 5% 10% 10% 0%;
+  align-items: center;
+  
 }
 
-.break-btn-text {
+/*.break-btn-text {
   color: #b41399;
   display: block;
   font-size: 18px;
   text-decoration: none;
   margin-bottom: 5px;
-}
+}*/
 
-
+/*.center{
+  display: flex;
+  
+}*/
 .end-btn {
-  width: 220px;
-  background: #e07007;
+  height: 70%;
+  background: #f3ae1a;
   text-align: center;
   border-radius: 4%;
-  bottom: 450px;
-  right: 132px;
-  position: fixed;
-  padding: 30px;
+  padding: 15%;
+  font-size:30px;
+  margin: 5% 10% 10% 0%;
+  align-items: center;
+  
 }
 
 .end-btn-text {
@@ -58,22 +103,3 @@
   margin-bottom: 5px;
 }
 
-
-.bgm-btn {
-  width: 120px;
-  background: hsla(29, 75%, 34%, 0.815);
-  text-align: center;
-  border-radius: 4%;
-  bottom: 450px;
-  right: 532px;
-  position: fixed;
-  padding: 30px;
-}
-
-.bgm-btn-text {
-  color: #f7f3f1;
-  display: block;
-  font-size: 18px;
-  text-decoration: none;
-  margin-bottom: 5px;
-}

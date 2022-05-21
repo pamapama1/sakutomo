@@ -3,10 +3,10 @@
    <div class = 'work_time'>
   <br>今日の作業時間は
   <%=@t%><a>でした</a>
-  <br>休憩時間は<%=@array%><a>です！</a>
+  <br>休憩時間は<%=@arrayone%><a>です！</a>
   <br>また明日もがんばりましょう！
     </div>
-       <%= link_to(root_path, class: 'root-btn') do %>
+          <%= link_to("http://localhost:3000", class: 'root-btn', data: {"turbolinks" => false}) do %>
       <span class='root-btn-text'>ホームに戻る</span>
     <%end%> 
 
