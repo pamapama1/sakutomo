@@ -13,11 +13,6 @@
   list-style:none
 
 }
-.sinin-btn-hed{
-  text-decoration: none;
-  display: flex;
-  padding-left: 15px;
-}
 .header-one{
   display: flex;
   justify-content: space-between;
@@ -35,7 +30,7 @@
   font-size: 30px;
 }
 .works-new-countents{
-  background: #f5f5f5;
+  background: #c8e413;
   /*display: flex;*/
   width: 100vw;
   height: 90vh;
@@ -112,7 +107,25 @@
   margin-bottom: 5px;
   border-style:none
 }
+.sinin-btn {
+  text-decoration: none;
+  width: 120px;
+  /*background: hsl(315, 85%, 46%);*/
+  text-align: center;
+  border-radius: 4%;
+  /*bottom: 250px;*/
+  /*right: 600px;
+  position: fixed;*/
+  padding: 30px;
+}
 
+.sinin-btn-text {
+  color: rgb(7, 7, 7);
+  display: block;
+  font-size: 18px;
+  text-decoration: none;
+  margin-bottom: 5px;
+}
 
 .session-btn {
   text-decoration: none;
